@@ -1,7 +1,7 @@
 import {Eventing} from "./Eventing";
 import {Sync} from "./Sync";
 
-interface UserProps {
+export interface UserProps {
     id?: number
     name?: string,
     age?: number
