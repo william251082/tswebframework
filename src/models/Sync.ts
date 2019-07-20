@@ -4,7 +4,7 @@ interface HasId {
     id: number;
 }
 
-class Sync<T extends HasId> {
+export class Sync<T extends HasId> {
     constructor(public rootUrl: string) {
     }
 
