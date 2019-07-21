@@ -1,6 +1,6 @@
 import {UserProps} from './User'
 
-class Attributes<T> {
+export class Attributes<T> {
     constructor(
         private data: T
     ) {}
