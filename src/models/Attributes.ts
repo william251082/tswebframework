@@ -1,9 +1,5 @@
-import {UserProps} from './User'
-
 export class Attributes<T> {
-    constructor(
-        private data: T
-    ) {
+    constructor(private data: T) {
     }
 
     get = <K extends keyof T>(key: K): T[K] => {
@@ -13,14 +9,8 @@ export class Attributes<T> {
     set(update: T): void {
         Object.assign(this.data, update)
     }
+
+    getAll(): T {
+        return this.data
+    }
 }
-
-const attrs = new Attributes<UserProps>({
-    id: 1,
-    age: 2,
-    name: 'doutz',
-});
-
-const id = attrs.get('id');
-const age = attrs.get('age');
-const name = attrs.get('name');

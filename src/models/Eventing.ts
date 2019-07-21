@@ -19,5 +19,5 @@ export class Eventing {
         handlers.forEach(callback => {
             return callback();
         })
-    }
+    };
 }
