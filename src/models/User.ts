@@ -19,13 +19,19 @@ export class User extends Model<UserProps> {
             new ApiSync<UserProps>(rootUrl)
         );
     }
-}
 
-// const user = User.buildUser({});
-// user.get('id');
-// user.get('name');
-// user.get('age');
-// user.fetch();
+    // static buildLocalUser(attrs: UserProps): User {
+    //     return new User(
+    //         new Attributes<UserProps>(attrs),
+    //         new Eventing(),
+    //         new LocalSync<UserProps>(rootUrl)
+    //     );
+    // }
+
+    isAdminUser(): boolean {
+        return this.get('id') === 1;
+    }
+}
 
 
 
