@@ -7,5 +7,3 @@ user.on('change', () => {
 });
 
 user.fetch();
-
-user.isAdminUser();
