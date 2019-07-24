@@ -1,4 +1,5 @@
 import {AxiosPromise, AxiosResponse} from "axios";
+import {ApiSync} from "./ApiSync";
 
 interface ModelAttributes<T> {
     set(value: T): void;
@@ -24,7 +25,7 @@ export class Model<T extends HasId> {
     constructor(
         private attributes: ModelAttributes<T>,
         private events: Events,
-        private sync: Sync<T>
+        private sync: ApiSync<T>
     ) {}
 
     get on() {
