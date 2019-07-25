@@ -7,6 +7,7 @@ export class UserForm {
                 <h1>   
                     User
                 </h1>   
+                <input type="text">
             </div>   
         `;
     }
