@@ -1,5 +1,16 @@
 export class UserForm {
-    constructor(public parent: Element) {}
+    constructor(public parent: Element) {
+    }
+
+    eventsMap(): { [key: string]: () => void } {
+        return {
+            'click:button': this.onButtonClick
+        }
+    }
+
+    onButtonClick(): void {
+        console.log('hi');
+    }
 
     template(): string {
         return `
@@ -8,6 +19,7 @@ export class UserForm {
                     User
                 </h1>   
                 <input type="text">
+                <button>Click Me</button>
             </div>   
         `;
     }
